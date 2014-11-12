@@ -12,3 +12,4 @@ pom.xml
 /build
 /out
 /dist
+/target
