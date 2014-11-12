@@ -1,0 +1,3 @@
+rootProject.name = "tinker-node"
+
+include "tinker-core"

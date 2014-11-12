@@ -1,0 +1,23 @@
+<pw.anisimov.tinker.web.GeneralRouteTest-results timestamp="1415824052961"><result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:44)" id="-1059739544"><stats time="1156" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:50)" id="1397070464"><stats time="163" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:56)" id="1980244844"><stats time="4" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:62)" id="-1722339996"><stats time="10" expectations="1" failures="1" examples="1"></stats></result>
+</pw.anisimov.tinker.web.GeneralRouteTest-results>
+<pw.anisimov.tinker.web.GeneralRouteTest-stats timestamp="1415824052985"><stats time="1192" expectations="6" failures="4" successes="2" examples="6"></stats></pw.anisimov.tinker.web.GeneralRouteTest-stats>
+<pw.anisimov.tinker.web.GeneralRouteTest-results timestamp="1415824247777"><result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:45)" id="-1059739544"><stats time="1127" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:53)" id="1397070464"><stats time="144" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:59)" id="1980244844"><stats time="4" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:65)" id="-1722339996"><stats time="3" expectations="1" failures="1" examples="1"></stats></result>
+</pw.anisimov.tinker.web.GeneralRouteTest-results>
+<pw.anisimov.tinker.web.GeneralRouteTest-stats timestamp="1415824247801"><stats time="1155" expectations="6" failures="4" successes="2" examples="6"></stats></pw.anisimov.tinker.web.GeneralRouteTest-stats>
+<pw.anisimov.tinker.web.GeneralRouteTest-results timestamp="1415824293805"><result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:45)" id="-1059739544"><stats time="1875" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:53)" id="1397070464"><stats time="200" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:59)" id="1980244844"><stats time="9" expectations="1" failures="1" examples="1"></stats></result>
+<result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:65)" id="-1722339996"><stats time="9" expectations="1" failures="1" examples="1"></stats></result>
+</pw.anisimov.tinker.web.GeneralRouteTest-results>
+<pw.anisimov.tinker.web.GeneralRouteTest-stats timestamp="1415824293824"><stats time="1927" expectations="6" failures="4" successes="2" examples="6"></stats></pw.anisimov.tinker.web.GeneralRouteTest-stats>
+<pw.anisimov.tinker.web.GeneralRouteTest-results timestamp="1415824796530"><result location="pw.anisimov.tinker.web.GeneralRouteTest (GeneralRouteTest.scala:45)" id="-1059739544"><stats time="1129" expectations="1" failures="1" examples="1"></stats></result>
+</pw.anisimov.tinker.web.GeneralRouteTest-results>
+<pw.anisimov.tinker.web.GeneralRouteTest-stats timestamp="1415824796568"><stats time="1162" expectations="6" failures="1" successes="5" examples="6"><trend><stats time="1162" failures="-3" successes="3"></stats></trend></stats></pw.anisimov.tinker.web.GeneralRouteTest-stats>
+<pw.anisimov.tinker.web.GeneralRouteTest-stats timestamp="1415824946110"><stats time="237" expectations="6" successes="6" examples="6"><trend><stats time="237" failures="-1" successes="1"></stats></trend></stats></pw.anisimov.tinker.web.GeneralRouteTest-stats>
+<pw.anisimov.tinker.web.GeneralRouteTest-stats timestamp="1415825111720"><stats time="198" expectations="6" successes="6" examples="6"></stats></pw.anisimov.tinker.web.GeneralRouteTest-stats>

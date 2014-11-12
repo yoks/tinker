@@ -1,0 +1,110 @@
+configurations {
+    distLibs
+    tinkerDeployKernel {
+        transitive = false
+    }
+}
+
+
+def scalaModules() {
+    // Change value to base name of the module
+    subprojects.findAll { it.name.contains('tinker-') }
+}
+
+configure(allprojects) { project ->
+    group = "pw.anisimov.tinker"
+
+    apply plugin: "scala"
+
+    ext.akkaDistVersion = "2.3.6"
+    ext.sprayVersion = "1.3.2"
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+configure(rootProject) { project ->
+    description = "Tinker Node Simulator"
+
+    dependencies {
+        distLibs(
+                [group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: akkaDistVersion],
+                [group: 'com.typesafe.akka', name: 'akka-remote_2.11', version: akkaDistVersion],
+                [group: 'com.typesafe.akka', name: 'akka-slf4j_2.11', version: akkaDistVersion],
+                [group: 'com.typesafe.akka', name: 'akka-kernel_2.11', version: akkaDistVersion],
+
+                [group: 'io.spray', name: 'spray-can_2.11', version: sprayVersion],
+                [group: 'io.spray', name: 'spray-routing_2.11', version: sprayVersion],
+                [group: 'io.spray', name: 'spray-json_2.11', version: '1.3.0'],
+
+                [group: 'org.scala-lang', name: 'scala-library', version: '2.11.2'],
+                [group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.2'],
+        )
+
+        tinkerDeployKernel(
+                project.project(':tinker-core')
+        )
+
+        compile(
+                [group: 'org.scala-lang', name: 'scala-library', version: '2.11.2']
+        )
+    }
+
+    task distClean(type: Delete) {
+        description = 'Cleans distribution'
+
+        delete 'dist'
+    }
+
+    task dist << {
+        description = 'Builds and create distribution'
+
+        copy {
+            from 'src/dist'
+            into 'dist'
+        }
+
+        copy {
+            from configurations.distLibs
+            into 'dist/lib'
+        }
+
+        copy {
+            from configurations.tinkerDeployKernel
+            into 'dist/deploy'
+        }
+    }
+
+    dist.dependsOn scalaModules().build
+}
+
+
+project("tinker-core") {
+    description = "Tinker Node Simulator Core"
+    dependencies {
+        compile(
+                [group: 'com.typesafe.akka', name: 'akka-kernel_2.11', version: akkaDistVersion],
+                [group: 'com.typesafe.akka', name: 'akka-remote_2.11', version: akkaDistVersion],
+                [group: 'com.typesafe.akka', name: 'akka-actor_2.11', version: akkaDistVersion],
+
+                [group: 'io.spray', name: 'spray-can_2.11', version: sprayVersion],
+                [group: 'io.spray', name: 'spray-routing_2.11', version: sprayVersion],
+                [group: 'io.spray', name: 'spray-json_2.11', version: '1.3.0'],
+
+        )
+        testCompile(
+                [group: 'junit', name: 'junit', version: '4.11'],
+                [group: 'org.scalatest', name: 'scalatest_2.11', version: '2.2.1'],
+                [group: 'com.typesafe.akka', name: 'akka-testkit_2.11', version: akkaDistVersion],
+                [group: 'io.spray', name: 'spray-testkit_2.11', version: sprayVersion]
+        )
+    }
+}

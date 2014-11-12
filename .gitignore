@@ -1,0 +1,14 @@
+# Common files
+.gradle
+pom.xml
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+/.idea
+
+# Build files
+/build
+/out
+/dist

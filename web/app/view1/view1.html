@@ -1,0 +1,45 @@
+<div class="container" ng-controller="View1Ctrl">
+
+    <div class="page-header">
+        <h1>Tinker Nodes Simulator</h1>
+
+        <p class="lead">Total Nodes: {{currentNodes}}, Timeout: {{currentTimeout}} </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <flot dataset="chartData" options="chartOptions" height="360px"></flot>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="nodesAdd" class="sr-only">Nodes</label>
+                    <input type="text" class="form-control" id="nodesAdd" ng-model="nodesToAdd" value="{{nodesToAdd}}">
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="addNodes()">Add Nodes</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="nodesRemove" class="sr-only">Nodes</label>
+                    <input type="text" class="form-control" id="nodesRemove" ng-model="nodesToDelete" value="{{nodesToDelete}}">
+                </div>
+                <button type="submit" class="btn btn-danger" ng-click="deleteNodes()">Delete Nodes</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label for="timerValue" class="sr-only">Nodes</label>
+                    <input type="text" class="form-control" id="timerValue" ng-model="newTimeout" value="{{newTimeout}}">
+                </div>
+                <button type="submit" class="btn btn-success" ng-click="changeTimer()">Change Timer</button>
+            </form>
+        </div>
+    </div>
+
+</div>
